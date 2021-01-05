@@ -1,6 +1,6 @@
 # PockMem
 
-<img src="截图.jpg" alt="截图" style="zoom: 25%;" />
+<img src="https://github.com/Zhengbledor/PockMem/blob/main/%E6%88%AA%E5%9B%BE.jpg" alt="截图" style="zoom: 25%;" />
 
 **微信小程序搜索：PockMem**
 
