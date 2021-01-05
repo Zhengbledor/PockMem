@@ -1,0 +1,24 @@
+<!--pages/mem/mem.wxml-->
+
+
+<view class='btn1'>  
+    <image class='collect' bindtap='changecollect' src="{{collect_src}}" style='flex-grow:1'></image> 
+    <view class='title'>
+      <view> {{temptitle}}  </view>
+      <image src="/icon/mem1.jpg" style='width:380rpx'></image> 
+      <view class='font-break'>{{tempvalue}}</view>
+      <view class='num'> 已记住次数：{{cardlists[tempindex].getnum}}</view>
+      <progress class='prog' show-info="true" 
+      percent="{{target_progress}}"
+      activeColor="#79AAD4" backgroundColor="gray" 
+      active="true" active-mode="forwards"></progress> 
+    </view>
+</view>
+<modal title="背诵完成" hidden="{{showmodal}}" confirm-text="确定" bindconfirm="modalBind" no-cancel="true">
+</modal>
+<button class='btn' bindtap="remember">
+  记住了
+</button> 
+<button class='btn' bindtap="forget">
+  俺忘了
+</button>

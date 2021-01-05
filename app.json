@@ -1,0 +1,49 @@
+{
+  "pages": [ 
+    "pages/lists/lists",
+    "pages/mem/mem",
+    "pages/card/card",
+    "pages/lost/lost",
+    "pages/my/my",
+    "pages/index/index",
+    "pages/us/us",
+    "pages/Calender/Calender"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#515151",
+    "navigationBarTitleText": "PockMem",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh":false
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [{
+        "pagePath": "pages/lists/lists",
+        "text": "主页",
+        "iconPath": "/icon/qiu-2.png",
+        "selectedIconPath": "/icon/qiu-2.png"
+      }, {
+        "pagePath": "pages/lost/lost",
+        "text": "易忘",
+        "iconPath": "/icon/miao.png",
+        "selectedIconPath": "/icon/miao.png"
+      },
+      {
+        "pagePath": "pages/Calender/Calender",
+        "text": "日历",
+        "iconPath": "/icon/wa.png",
+        "selectedIconPath": "/icon/wa.png"
+      }
+
+    ],
+
+    "backgroundColor": "white",
+    "color": "#8a8a8a", 
+    "selectedColor": "#515151"
+  }
+
+
+
+}

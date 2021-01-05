@@ -1,0 +1,25 @@
+<view>
+  <view class="header">
+    <view class="img">
+      <image src="/icon/PockMem.png"></image>
+    </view>
+  </view>
+  <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+      size="default"
+    ></button>
+
+  </view>
+</view>
+<button bindtap="toCalender">
+  打卡情况
+  </button>
+<movable-view>
+    <movable-view bindtap="more" class="more" direction="all" >
+      关于我们
+    </movable-view>
+</movable-view>

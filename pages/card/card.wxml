@@ -1,0 +1,62 @@
+<!--pages/card/card.wxml-->
+<view class="shuliang">
+  <view>卡片总数: {{cardnum}}</view>
+  <view class="bianji"> （点击标题可编辑）</view>
+</view>
+
+<view class="memmode">
+  <view bindtap="mem" data-index="1" class="box">
+    <image src="/icon/sx.jpg" class="pic"></image>
+    <view class="ceng">
+      <view> 顺序背诵 </view>
+    </view>
+  </view>
+  <view bindtap="mem" data-index="2" class="box">
+    <image src="/icon/sj.jpg" class="pic"></image>
+    <view class="ceng">
+      <view> 随机背诵 </view>
+    </view>
+  </view>
+  <view bindtap="mem" data-index="3" class="box">
+    <image src="/icon/kx.jpg" class="pic"></image>
+    <view class="ceng">
+      <view> 科学背诵 </view>
+    </view>
+  </view>
+  <view bindtap="addcard" class="box">
+    <image src="/icon/tj.jpg" class="pic"></image>
+    <view class="ceng">
+      <view> 添加卡片 </view>
+    </view>
+  </view>
+</view>
+<view class="cards">
+  <view class="cardbox" wx:for="{{cardlists}}" wx:for-index="id" wx:for-item="item" hidden="{{item.title==''}}">
+    <view bindtap="edi" data-index="{{id}}">标题: {{item.title}} （点击标题可以编辑）</view>
+    <view>内容:{{item.value}}</view> 
+    <view class="right">level:{{item.level}}</view>
+    <view class="right" bindtap="del" data-index="{{id}}">删除</view>
+  </view> 
+</view>
+
+<modal title="背诵目标" hidden="{{showmodal2}}" confirm-text="开始背诵" bindconfirm="modalBindMem" no-cancel="true"> 
+  <slider min="1" max="{{cardnum}}" step="1" value="{{cardnum}}" show-value="true" bindchange="setTarget"></slider> 
+</modal> 
+
+<modal title="新建一个卡片" hidden="{{showmodal}}" bindconfirm="modalBindconfirm" bindcancel="modalBindcancel">
+  <input  name="title" bindinput="settitle" placeholder="卡片标题" value="{{temptitle}}">
+  </input>
+  <input  name="value" bindinput="setvalue" placeholder="卡片内容" value="{{tempvalue}}">
+  </input>
+  <slider min="1" max="5" step="1" value="{{level}}" show-value="true" bindchange="setlevel">Level</slider>
+</modal>
+
+<modal title="编辑卡片" hidden="{{showmodal1}}" bindconfirm="modalBindconfirm1" bindcancel="modalBindcancel1">
+  <input  name="title" bindinput="settitle" placeholder="卡片标题" value="{{temptitle}}">
+  </input>
+  <input  name="value" bindinput="setvalue" placeholder="卡片内容" value="{{tempvalue}}">
+  </input>
+  <slider min="1" max="5" step="1" value="{{level}}" show-value="true" bindchange="setlevel">Level</slider>
+</modal>
+
+

@@ -1,0 +1,45 @@
+<view class="header">
+  <view class="img">
+    <image src="/icon/PockMem.png" mode="heightFix"></image>
+  </view>
+</view>
+
+<view class="content">
+  <image class='background' src="/icon/pikaqiu.jpg" mode="aspectFill"></image>
+</view>
+
+<view class="con"> 
+    
+  <image src="/icon/member.png" mode="aspectFit" ></image>
+
+    <view class="count">
+      <navigator  url="../card/card?index={{id}}"> {{item.title}}Members{{item.cardnum}} </navigator> 
+      <view>
+        <text bindtap="rename" data-index="{{id}}">-郑志豪--陈泽峰--王俪晔--周格菲--杨开源-</text>
+      </view>
+    </view>
+  
+  <view>
+    <text>\n</text>
+  </view>
+
+    <view class="count">
+      <navigator  url="../card/card?index={{id}}"> {{item.title}} Tips{{item.cardnum}} </navigator> 
+      <view>
+        <text bindtap="del" data-index="{{id}}">电子卡片记录碎片知识  </text>
+        <text bindtap="rename" data-index="{{id}}">科学曲线助力记忆 </text>
+      </view>
+    </view>
+  
+  <view>
+    <text>\n</text>
+  </view>
+
+    <view class="count">
+      <navigator  url="../card/card?index={{id}}"> {{item.title}} OpenSource{{item.cardnum}} </navigator> 
+      <view>
+        <text bindtap="del" data-index="{{id}}">gitee.com/tank-squaad/PockMem</text>
+      </view>
+    </view>  
+</view>
+

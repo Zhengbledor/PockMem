@@ -1,0 +1,55 @@
+/* pages/mem/mem.wxss */
+.btn{
+  width: 90%;
+  margin-top: 30rpx;
+  background-color: #EDE4DF;
+  color: #79AAD4;
+  font-size: 30rpx;
+}
+.title{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+.collect{
+   width: 80rpx;
+   height: 80rpx; 
+   position: absolute; 
+   left: 660rpx;
+   padding: 0;
+}
+.btn1{
+  width: 100%;
+  margin-top: 10rpx;
+  margin-right: 15rpx;
+  margin-left: 10rpx;
+  background-color: #EDE4DF;
+  color: #79AAD4;
+  font-size: 50rpx;
+}
+.num{
+  font-size: 30rpx;
+  margin-top: 30rpx;
+}
+.font-break {
+  margin-top: 20rpx;
+  width: 90%;
+  word-break:break-all;
+}
+.memmode .pic { width: 100%; height: 100%;}
+.flex-wrp-row { 
+  display: flex; 
+  flex-direction: row; 
+} 
+.item { 
+  padding: 30rpx; 
+  position: relative; 
+} 
+.item-right { 
+  position: relative; 
+  align-items:center; 
+} 
+.prog{
+  width:90%;
+}

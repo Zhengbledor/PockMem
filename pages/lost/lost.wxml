@@ -1,0 +1,23 @@
+<!--pages/lost/lost.wxml-->
+<view class="header">
+  <view class="img">
+    <image src="/icon/PockMem.png" mode="heightFix"></image>
+  </view>
+</view>
+<view class="content">
+  <image class='background' src="/icon/pikaqiu.jpg" mode="aspectFill"></image>
+</view>
+ 
+      <view  wx:for="{{lostlist}}" wx:for-index="idc" wx:for-item="itemc" class="pocket">
+        <view  class="bg">
+          <view class="txt1">
+            <text>{{itemc.card.title}}</text>
+          </view>
+          <view class="txt2">
+            <text>{{itemc.card.value}}</text>
+          </view>
+    
+        </view>
+      </view> 
+
+

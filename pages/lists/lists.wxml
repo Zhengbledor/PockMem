@@ -1,0 +1,42 @@
+<!--pages/lists/lists.wxml-->
+<view class="header">
+  <view class="img">
+    <image src="/icon/PockMem.png" mode="heightFix"></image>
+  </view>
+</view>
+<view class="content">
+  <image class='background' src="/icon/pikaqiu.jpg" mode="aspectFill"></image>
+</view>
+
+<view class="con">
+  <view>
+    <modal title="新建一个口袋" hidden="{{showmodal}}" bindconfirm="modalBindconfirm" bindcancel="modalBindcancel">
+    <input  name="title" bindinput="settitle" placeholder="为你的口袋起一个名字" value="{{temptitle}}" >
+    </input>
+    </modal>
+    <modal title="重命名" hidden="{{showmodal1}}" bindconfirm="modalBindconfirm1" bindcancel="modalBindcancel1">
+    <input  name="title1" bindinput="settitle" placeholder="重新输入名字" value="{{temptitle}}">
+    </input>
+    </modal>
+  </view>
+  <view wx:for="{{PocketList}}"  wx:for-index="id" wx:for-item="item" hidden="{{item.title==''}}" class="pockets">
+    <view class="count">
+      <view class="bg">
+        <text > {{item.title}} </text> 
+        <view >
+          <navigator  url="../card/card?index={{id}}">进入口袋(含{{item.cardnum}}张卡片) </navigator> 
+          <text bindtap="del" data-index="{{id}}">删除 </text>
+          <text bindtap="rename" data-index="{{id}}">重命名 </text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<movable-view class="tianjia">
+    <movable-view bindtap="add" class="add" direction="all" >
+      添加口袋
+    </movable-view>
+</movable-view>
+
+
