@@ -1,6 +1,6 @@
 # PockMem
 
-<img src="E:\CODE\pockmem\PockMem\截图.jpg" alt="截图" style="zoom: 25%;" />
+<img src="截图.jpg" alt="截图" style="zoom: 25%;" />
 
 **微信小程序搜索：PockMem**
 
